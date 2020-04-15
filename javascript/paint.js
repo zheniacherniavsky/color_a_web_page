@@ -27,6 +27,9 @@ $(document).ready(function() {
  		});
 	})
 
+	$("td").mousedown(function() {
+		$(this).addClass(color);
+	});
 	$("#paint").mousedown(function(){ 
 	    paint = true;
 	    $("#configIcon").fadeOut("fast");
@@ -40,8 +43,8 @@ $(document).ready(function() {
 		if(paint) {
 			$(this).removeClass();
 			$(this).addClass(color);
-			$(this).addClass('hoverTD');
 		}
+		$(this).addClass('hoverTD');
 	}, function() {
 		$(this).removeClass('hoverTD')
 	});
